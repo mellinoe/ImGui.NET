@@ -87,7 +87,7 @@ namespace ImGuiNET
             return (uint)((oldValue & ~mask) | (newBits << offset & mask));
         }
 
-        internal static ulong SetBits(byte oldValue, int offset, int bitCount, ulong newBits)
+        internal static ulong SetBits(ulong oldValue, int offset, int bitCount, ulong newBits)
         {
             var mask = (ulong)((1 << bitCount) - 1 << offset);
             return (ulong)((oldValue & ~mask) | (newBits << offset & mask));
