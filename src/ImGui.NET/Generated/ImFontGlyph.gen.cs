@@ -29,17 +29,17 @@ namespace ImGuiNET
         public uint Colored
         {
             get => (uint)Util.GetBits(NativePtr->_bitField_0, 0, 1);
-            set => Util.SetBits(NativePtr->_bitField_0, 0, 1, (uint)value);
+            set => NativePtr->_bitField_0 = Util.SetBits(NativePtr->_bitField_0, 0, 1, (uint)value);
         }
         public uint Visible
         {
             get => (uint)Util.GetBits(NativePtr->_bitField_0, 1, 1);
-            set => Util.SetBits(NativePtr->_bitField_0, 1, 1, (uint)value);
+            set => NativePtr->_bitField_0 = Util.SetBits(NativePtr->_bitField_0, 1, 1, (uint)value);
         }
         public uint Codepoint
         {
             get => (uint)Util.GetBits(NativePtr->_bitField_0, 2, 30);
-            set => Util.SetBits(NativePtr->_bitField_0, 2, 30, (uint)value);
+            set => NativePtr->_bitField_0 = Util.SetBits(NativePtr->_bitField_0, 2, 30, (uint)value);
         }
         public ref float AdvanceX => ref Unsafe.AsRef<float>(&NativePtr->AdvanceX);
         public ref float X0 => ref Unsafe.AsRef<float>(&NativePtr->X0);

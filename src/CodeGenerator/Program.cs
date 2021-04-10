@@ -181,7 +181,7 @@ namespace CodeGenerator
 
                             writer.PushBlock($"public {typeStr} {field.Name}");
                             writer.WriteLine($"get => ({typeStr})Util.GetBits(NativePtr->{bitField.Name}, {offset}, {field.BitSize});");
-                            writer.WriteLine($"set => Util.SetBits(NativePtr->{bitField.Name}, {offset}, {field.BitSize}, ({bitField.Type})value);");
+                            writer.WriteLine($"set => NativePtr->{bitField.Name} = Util.SetBits(NativePtr->{bitField.Name}, {offset}, {field.BitSize}, ({bitField.Type})value);");
                             writer.PopBlock();
                         }
                         else if (typeStr.Contains("ImVector"))

@@ -26,7 +26,7 @@ namespace ImGuiNET
         public ImGuiSortDirection SortDirection
         {
             get => (ImGuiSortDirection)Util.GetBits(NativePtr->_bitField_0, 0, 8);
-            set => Util.SetBits(NativePtr->_bitField_0, 0, 8, (byte)value);
+            set => NativePtr->_bitField_0 = Util.SetBits(NativePtr->_bitField_0, 0, 8, (byte)value);
         }
         public void Destroy()
         {
